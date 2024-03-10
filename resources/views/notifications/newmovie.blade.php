@@ -18,7 +18,7 @@
   			<li class="list-group-item list-group-item-action" id="markasread" data-id="{{$nofication['id']}}">
 			@endif
 
-  			<a href="/movie/{{$nofication['data']['notification']['movieId']}}" aria-current="true" style="text-decoration: none !important; color:inherit;">
+  			<a href="/user/movie/{{$nofication['data']['notification']['movieId']}}" aria-current="true" style="text-decoration: none !important; color:inherit;">
   			<!-- <a href="/movie/{{$nofication['data']['notification']['movieId']}}" aria-current="true"> -->
       			<div class="row justify-content-center">
 					<div class="col-md-4" style="background-image: url(
@@ -54,14 +54,14 @@
  
         
 
-    function markasreadNotification(ele){ alert("success");
+    function markasreadNotification(ele){ 
     $id = $(ele).data("id");
                $.ajax({
-        url: "/movie_notification_markasread/"+$id,
+        url: "/user/movie_notification_markasread/"+$id,
         type: 'GET',
         success: function(res) {
-            console.log(res);
-            alert(res);
+            // console.log(res);
+          
         }
     });
             

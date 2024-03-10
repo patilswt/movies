@@ -18,7 +18,7 @@
   <div class="card-body">
     <h5 class="card-title">{{substr($movie->title,0,30)}}</h5>
     <p class="card-text">{{$movie->publication_date}}</p>
-    <a href="/movie/{{$movie->id}}" class="btn btn-primary">view more</a>
+    <a href="/user/movie/{{$movie->id}}" class="btn btn-primary">view more</a>
   </div>
 </div>
         </div>

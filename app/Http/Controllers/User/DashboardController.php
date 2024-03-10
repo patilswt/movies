@@ -14,7 +14,7 @@ class DashboardController extends Controller
         return view('user.dashboard',compact('movies'));
     }
 
-    public function getmovie($id)
+    public function getMovie($id)
     {
         $movie = MovieModel::where("id",$id)->get();
         

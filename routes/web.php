@@ -27,8 +27,8 @@ Route::group(['prefix' => 'admin','middleware'=>['auth','admin']], function () {
 
 Route::group(['prefix' => 'user','middleware'=>['auth','user']], function () {
 	Route::get('dashboard', 'App\Http\Controllers\User\DashboardController@index')->name('dashboard');
-	Route::get('/movie/{id}', 'App\Http\Controllers\User\DashboardController@getmovie');
-	Route::get('/movie_notification', 'App\Http\Controllers\User\DashboardController@getNotification');
-	Route::get('/movie_notification_markasread/{id}', 'App\Http\Controllers\User\DashboardController@markAsRead');
+	Route::get('/movie/{id}', 'App\Http\Controllers\User\DashboardController@getMovie');
+	Route::get('/movie_notification', 'App\Http\Controllers\User\DashboardController@getNotification')->name('getNotification');
+	Route::get('/movie_notification_markasread/{id}', 'App\Http\Controllers\User\DashboardController@markAsRead')->name('markAsRead');
 
 });
